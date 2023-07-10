@@ -1,8 +1,7 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Detail from "../pages/Detail";
 import Home from "../pages/Home";
 import Write from "../pages/Write";
-
-const { BrowserRouter, Routes, Route } = require("react-router-dom");
 
 const Router = () => {
   return (

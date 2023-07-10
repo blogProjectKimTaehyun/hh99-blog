@@ -6,6 +6,9 @@ const Home = () => {
   return (
     <Layout>
       <Header />
+      <BlogList>
+        <BlogList.Title>All Posts</BlogList.Title>
+      </BlogList>
     </Layout>
   );
 };
