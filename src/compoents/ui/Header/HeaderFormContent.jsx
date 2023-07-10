@@ -2,10 +2,10 @@ import {
   StCatagory,
   StCatagoryItem,
   StCatagoryMenu,
-  StIntro,
-  StIntroDesc,
-  StIntroLink,
-  StIntroProfile,
+  StProfile,
+  StProfileImg,
+  StProfileDesc,
+  StProfileContact,
 } from "./style";
 
 /**
@@ -14,20 +14,22 @@ import {
  * @param {string} link the link of Intro
  */
 
-export const Intro = ({ profile, desc, blog }) => {
+export const Profile = ({ profile, desc, blog }) => {
   return (
-    <StIntro>
-      <StIntroProfile>
-        <span></span>
-      </StIntroProfile>
-      <StIntroDesc>
+    <StProfile>
+      <StProfileImg>
+        <span id="hightlight"></span>
+      </StProfileImg>
+
+      <StProfileDesc>
         <p className="name">{desc.name}</p>
         <p className="job">{desc.job}</p>
-      </StIntroDesc>
-      <StIntroLink>
+      </StProfileDesc>
+
+      <StProfileContact>
         <a href={blog}>{blog}</a>
-      </StIntroLink>
-    </StIntro>
+      </StProfileContact>
+    </StProfile>
   );
 };
 

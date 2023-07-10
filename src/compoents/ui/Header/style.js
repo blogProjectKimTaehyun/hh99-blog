@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const StHeader = styled.div`
+export const HeaderContainer = styled.div`
   min-width: 450px;
   width: 20vw;
   height: 100vh;
@@ -8,7 +8,7 @@ export const StHeader = styled.div`
   box-sizing: border-box;
 `;
 
-export const StNav = styled.nav`
+export const HeaderForm = styled.nav`
   width: 100%;
   height: 100%;
   border: none;
@@ -16,7 +16,7 @@ export const StNav = styled.nav`
   background: rgb(14, 17, 22);
 `;
 
-export const StIntro = styled.div`
+export const StProfile = styled.div`
   height: 50%;
   padding: 0;
   margin: 0;
@@ -26,7 +26,7 @@ export const StIntro = styled.div`
   align-items: center;
 `;
 
-export const StIntroProfile = styled.div`
+export const StProfileImg = styled.div`
   position: relative;
   width: 200px;
   height: 200px;
@@ -38,8 +38,7 @@ export const StIntroProfile = styled.div`
       transform: rotate(360deg);
     }
   }
-
-  span {
+  #hightlight {
     position: absolute;
     top: 0;
     left: 50%;
@@ -52,7 +51,7 @@ export const StIntroProfile = styled.div`
   }
 `;
 
-export const StIntroDesc = styled.div`
+export const StProfileDesc = styled.div`
   font-size: 1rem;
   text-align: center;
   color: #bbb;
@@ -66,7 +65,7 @@ export const StIntroDesc = styled.div`
   }
 `;
 
-export const StIntroLink = styled.div`
+export const StProfileContact = styled.div`
   margin: 0;
   a {
     color: #fff;
