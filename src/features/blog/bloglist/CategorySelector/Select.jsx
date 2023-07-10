@@ -44,7 +44,7 @@ export const Select = ({ overflow }) => {
           JavaScript
         </DropDown>
         <DropDown inner="true" onClick={onSelectHandler}>
-          ComputerScience
+          CS
         </DropDown>
         <DropDown inner="true" onClick={onSelectHandler}>
           NEXT
