@@ -5,6 +5,7 @@ const Header = () => {
   const profileDesc = { name: "MIN", job: "Web Frontend Developer" };
   const profileContact = "https://minprogramming.tistory.com";
   const catagoryList = ["Post", "Contact", "About"];
+
   return (
     <HeaderContainer>
       <HeaderForm>

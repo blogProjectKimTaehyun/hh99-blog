@@ -11,10 +11,10 @@ import {
 /**
  * @param {string} profile the profile of Intro
  * @param {object} desc the desc of Intro
- * @param {string} link the link of Intro
+ * @param {string} contact the contact of Intro
  */
 
-export const Profile = ({ profile, desc, blog }) => {
+export const Profile = ({ profile, desc, contact }) => {
   return (
     <StProfile>
       <StProfileImg>
@@ -27,7 +27,7 @@ export const Profile = ({ profile, desc, blog }) => {
       </StProfileDesc>
 
       <StProfileContact>
-        <a href={blog}>{blog}</a>
+        <a href={contact}>{contact}</a>
       </StProfileContact>
     </StProfile>
   );
