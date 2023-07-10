@@ -12,7 +12,7 @@ const Home = () => {
       <Header />
       <BlogList>
         <BlogList.Title>All Posts</BlogList.Title>
-        <BlogCategorySelector>category</BlogCategorySelector>
+        <BlogCategorySelector></BlogCategorySelector>
         <BlogListItems>
           <BlogItem />
           <BlogItem />

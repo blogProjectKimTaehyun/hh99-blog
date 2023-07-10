@@ -5,6 +5,7 @@ import {
   DropDownContainer,
   Message,
 } from "./SelectStyle";
+import { Navigate, useNavigate } from "react-router-dom";
 /**
  *
  * @param {boolean} overflow overflow를 써주면 hidden 활성화
@@ -12,12 +13,11 @@ import {
  */
 export const Select = ({ overflow }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [displayName, setDisplayName] = useState("리엑트");
-  const [isMessageShowing, setIsMessageShowing] = useState(false);
+  const navigate = useNavigate();
 
   const onSelectHandler = useCallback((e) => {
-    setDisplayName(e.target.innerText);
-    setIsMessageShowing(true);
+    const category = e.target.innerText;
+    navigate(`/category/${category.toLowerCase()}`);
     setIsOpen(false);
   }, []);
   return (
@@ -32,21 +32,31 @@ export const Select = ({ overflow }) => {
           setIsOpen(true);
         }}
       >
-        <span>{!isMessageShowing && displayName}</span>\<div>▼</div>
+        <span>Category</span>
+        <div>▼</div>
       </DropDown>
 
       <DropDownOpen className={isOpen ? "open" : ""}>
         <DropDown inner="true" onClick={onSelectHandler}>
-          리엑트
+          React
         </DropDown>
         <DropDown inner="true" onClick={onSelectHandler}>
-          자바
+          JavaScript
         </DropDown>
         <DropDown inner="true" onClick={onSelectHandler}>
-          스프링
+          ComputerScience
         </DropDown>
         <DropDown inner="true" onClick={onSelectHandler}>
-          노드
+          NEXT
+        </DropDown>
+        <DropDown inner="true" onClick={onSelectHandler}>
+          Redux
+        </DropDown>
+        <DropDown inner="true" onClick={onSelectHandler}>
+          Etc
+        </DropDown>
+        <DropDown inner="true" onClick={onSelectHandler}>
+          Tailwind
         </DropDown>
       </DropDownOpen>
     </DropDownContainer>
