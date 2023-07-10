@@ -18,8 +18,7 @@ export const DropDown = styled.button`
     background-color: ${(prop) => (prop.inner ? "rgb(20, 20, 20)" : "")};
   }
 `;
-// width: 244px;
-// width: 242px;
+
 export const DropDownOpen = styled.div`
   width: 10rem;
   padding: 0;

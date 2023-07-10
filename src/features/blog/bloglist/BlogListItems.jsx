@@ -1,7 +1,16 @@
-import { StBlogListItems } from "./styles";
+import { styled } from "styled-components";
 
-const BlogListItems = ({ children }) => {
-  return <StBlogListItems>{children}</StBlogListItems>;
+const StBlogListMenu = styled.div`
+  margin-top: 1.5rem;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+`;
+
+const BlogListMenu = ({ children }) => {
+  return <StBlogListMenu>{children}</StBlogListMenu>;
 };
 
-export default BlogListItems;
+export default BlogListMenu;

@@ -1,11 +1,6 @@
 import React, { useCallback, useState } from "react";
-import {
-  DropDown,
-  DropDownOpen,
-  DropDownContainer,
-  Message,
-} from "./SelectStyle";
-import { Navigate, useNavigate } from "react-router-dom";
+import { DropDown, DropDownOpen, DropDownContainer } from "./SelectStyle";
+import { useNavigate } from "react-router-dom";
 /**
  *
  * @param {boolean} overflow overflow를 써주면 hidden 활성화
@@ -20,12 +15,13 @@ export const Select = ({ overflow }) => {
     navigate(`/category/${category.toLowerCase()}`);
     setIsOpen(false);
   }, []);
+
   return (
     <DropDownContainer
-      {...(overflow ? { overflow } : {})}
       onMouseLeave={() => {
         setIsOpen(false);
       }}
+      {...(overflow ? { overflow } : {})}
     >
       <DropDown
         onMouseEnter={() => {
