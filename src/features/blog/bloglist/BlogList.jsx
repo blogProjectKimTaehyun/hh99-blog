@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 const BlogList = ({ children }) => {
+  console.log("Asdfsadf");
   return <StBlogList>{children}</StBlogList>;
 };
 
