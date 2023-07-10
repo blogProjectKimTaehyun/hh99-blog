@@ -1,17 +1,18 @@
-import { Catagory, Intro } from "./HeaderContent";
-import { StHeader, StNav } from "./style";
+import { Catagory, Profile } from "./HeaderFormContent";
+import { HeaderContainer, HeaderForm } from "./style";
 
 const Header = () => {
-  const introDesc = { name: "MIN", job: "Web Frontend Developer" };
-  const introBlog = "https://minprogramming.tistory.com";
-  const catagory = ["Post", "Contact", "About"];
+  const profileDesc = { name: "MIN", job: "Web Frontend Developer" };
+  const profileContact = "https://minprogramming.tistory.com";
+  const catagoryList = ["Post", "Contact", "About"];
+
   return (
-    <StHeader>
-      <StNav>
-        <Intro desc={introDesc} blog={introBlog} />
-        <Catagory catagory={catagory} />
-      </StNav>
-    </StHeader>
+    <HeaderContainer>
+      <HeaderForm>
+        <Profile desc={profileDesc} contact={profileContact} />
+        <Catagory catagory={catagoryList} />
+      </HeaderForm>
+    </HeaderContainer>
   );
 };
 
